@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrew Dawson</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+      async defer></script>
+    <script src="index.js" async defer></script>
+   
+  </head>
+  <body>
+    <section id="landing--page" onmousemove="moveBackground(event)">
+      <nav>
+        <figure>
+          <h2 id="personal-logo">Andrew :D</h2>
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >
+              About
+            </a>
+          </li>
+          <li class="nav__link">
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >
+              Projects
+            </a>
+          </li>
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >
+              Contact
+            </a>
+          </li>
+          <li class="nav__link">
+            <a
+              href=""
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >
+              <i class="fas fa-adjust click" onclick="toggleContrast()"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <header class="header">
+        <div class="header__content">
+          <h1 class="title">Hey</h1>
+          <h1 class="title title--secondary blue">I'm Andrew</h1>
+        </div>
+        <p class="header__para">
+          I'm a
+          <b class="blue">Front End Developer</b>
+          with a passion for building web applications and fantastic user
+          experiences.
+          <br />
+          Here is more
+          <b class="blue click" onclick="toggleModal()">about me.</b>
+        </p>
+        <div class="social__list">
+          <a
+            href="https://www.linkedin.com/in/andrewdawson3"
+            class="social__link click"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://github.com/Andr3wDawson"
+            target="_blank"
+            class="social__link click"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="assets/resume.pdf"
+            class="social__link click"
+            target="_blank"
+          >
+            <i class="fas fa-file"></i>
+          </a>
+        </div>
+      </header>
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fas fa-envelope"></i>
+        </button>
+      </a>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Front End Developer
+          </h4>
+          <p class="modal__para">
+            I am a
+            <b class="blue">Front End Developer</b>
+            with a passion for building web applications and fantastic
+            <b class="blue">user experiences.</b>
+            <br />
+            I recently graduated college in 2021 with a
+            <b class="blue">bachelors</b> in Business Analytics Since the moment
+            I printed “Hello World” I became hooked on Front End Development.
+            Front End Development provides an opportunity to create quality user
+            experiences and web applications. I found a passion in utilizing
+            JavaScript to implement logic to a computer and styling with CSS. If
+            given the opportunity, the employer would be gaining a hard working
+            employee that gets the task done.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://i0.wp.com/theicom.org/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500&ssl=1&w=640"
+                alt=""
+              />
+              <span class="language__name">Node</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png"
+                alt=""
+              />
+              <span class="language__name">JS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png"
+                alt=""
+              />
+              <span class="language__name">JS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://i0.wp.com/theicom.org/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500&ssl=1&w=640"
+                alt=""
+              />
+              <span class="language__name">JS</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact">Lets have a chat!</h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I am currently open to new opportunities.
+          </h4>
+          <form id="contact__form">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea
+                class="input"
+                name="message"
+                type="text"
+                required
+              ></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thank you for the message! Looking forward to speaking to you soon.
+          </div>
+        </div>
+      </div>
+      <img src="assets/semi circle.svg" class="shape shape--0" />
+      <img src="assets/circle.svg" class="shape shape--1" />
+      <img src="assets/squiggly.svg" class="shape shape--2" />
+      <img src="assets/circle.svg" class="shape shape--3" />
+      <img src="assets/triangle.svg" class="shape shape--4" />
+      <img src="assets/circle.svg" class="shape shape--5" />
+      <img src="assets/squiggly.svg" class="shape shape--6" />
+      <img src="assets/circle.svg" class="shape shape--7" />
+      <img src="assets/semi circle.svg" class="shape shape--8" />
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my
+            <span class="blue">projects</span>
+          </h1>
+          <ul class="projects__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="assets/ipad-mockup-featuring-a-monochromatic-background-2176-el1.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Bob's Burgers</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, Javascript
+                  </h4>
+                  <p class="project__description--para">
+                    This website allows the user to explore and learn about
+                    random characters from the t.v show Bob's Burgers. Click the
+                    github icon to view the code.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Andr3wDawson/Bobs-Burgers"
+                      target="blank"
+                      class="project__description--link"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://andr3wdawson.github.io/Bobs-Burgers/"
+                      target="blank"
+                      class="project__description--link"
+                    >
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my
+            <span class="blue">projects</span>
+          </h1>
+          <ul class="projects__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="assets/imac-mockup-standing-on-a-solid-color-room-a20674.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Pokemon</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, Javascript
+                  </h4>
+                  <p class="project__description--para">
+                    This website allows the user to select any pokemon and learn
+                    a little more about the selected pokemon.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/tribalxghost/Pokemon"
+                      target="blank"
+                      class="project__description--link"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://tribalxghost.github.io/Pokemon/"
+                      target="blank"
+                      class="project__description--link"
+                    >
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <figure class="footer__logo--wrapper">
+            <h2 class="footer__logo">Andrew :D</h2>
+          </figure>
+          <div class="footer__social--list">
+            <a
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              href="https://github.com/Andr3wDawson"
+              target="_blank"
+            >
+              Github
+            </a>
+
+            <a
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              href="https://www.linkedin.com/in/andrewdawson3"
+              target="_blank"
+            >
+              Linkedin
+            </a>
+
+            <a
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              href="#"
+              onclick="toggleModal()"
+            >
+              Contact
+            </a>
+
+            <a
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              href="assets/resume.png"
+              target="_blank"
+            >
+              Resume
+            </a>
+          </div>
+          <div class="footer__copyright">
+            Copyright &copy; 2022 Andrew Dawson
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
