@@ -27,13 +27,12 @@ function contact(event) {
         ).then((data) => {
             loading.classList.remove("modal__overlay--visible")
             success.classList += " modal__overlay--visible"
-            alert("It Worked")
         }).catch((event) => {
             loading.classList.remove("modal__overlay--visible")
             console.error(event);
             alert("The email service is temporarily unavailable. Please contact me directly on andrewcdawson@yahoo.com")
         })
-        alert("?")
+        
 }
 
 let isModalOpen = false
